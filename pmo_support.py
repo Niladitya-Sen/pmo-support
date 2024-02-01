@@ -8,7 +8,7 @@ from flask_cors import CORS
 from datetime import datetime
 
 app = Flask(__name__)
-CORS(app, resources={"/api/": {"origins": "*"}})
+CORS(app)
 
 
 db_connection_string = (
