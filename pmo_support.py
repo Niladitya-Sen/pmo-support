@@ -65,7 +65,7 @@ def fetch_ticket_status(Error_ticket):
     connection = pyodbc.connect(db_connection_string)
     cursor = connection.cursor()
 
-    query = "SELECT Status, Comment , UpdatedDate FROM Logbook WHERE LogbookId = ?"
+    query = "SELECT Status, Comment , CreatedDate , UpdatedDate FROM Logbook WHERE LogbookId = ?"
     result = cursor.execute(query, (Error_ticket)).fetchall()
 
     connection.close()
@@ -136,7 +136,8 @@ def chatbot_api():
                 "message": [
                     f"Your Ticket Status is: {ticket_status[0]} ",
                     f"\tCurrent Comment: {ticket_status[1]} ",
-                    f"\t Last Update Date is: {ticket_status[2]}",
+                    f"\t Ticket Created on: {ticket_status[2]}",
+                    f"\t Last Updated on: {ticket_status[3]}",
                 ],
             }
         )
