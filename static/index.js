@@ -19,7 +19,7 @@ async function getReply(message) {
         [keys[count]]: message
     };
 
-    const response = await fetch('http://127.0.0.1:5000/support/api/chatbot', {
+    const response = await fetch('https://skioapi.idea2mvp.co/support/api/chatbot', {
         method: 'POST',
         body: JSON.stringify(messages),
         headers: {

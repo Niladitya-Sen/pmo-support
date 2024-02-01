@@ -8,7 +8,7 @@ from flask_cors import CORS
 from datetime import datetime
 
 app = Flask(__name__)
-CORS(app, resources={"/api/": {"origins": ""}})
+CORS(app, resources={"/api/": {"origins": "*"}})
 
 
 db_connection_string = (
@@ -78,7 +78,7 @@ def get_issupport(email):
     query = f"SELECT IsSupport from [User] WHERE Email=?"
     result = cursor.execute(query, email).fetchone()
     connection.close()
-    
+
     if result:
         return result[0]
     else:
