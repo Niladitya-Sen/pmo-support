@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f1f1f1;
+
+}
+
+main {
+    padding: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+}
+
+main>section>h1 {
+    padding: 1rem;
+    background-color: #484bfe;
+    color: #fff;
+    border-radius: 0.5rem 0.5rem 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+main>section {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    height: 95svh;
+    display: flex;
+    flex-direction: column;
+}
+
+#chatBox {
+    flex-grow: 1;
+    padding-inline: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+#chatInputForm {
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#chatInputForm>input {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+#chatInputForm>button {
+    border: none;
+    background-color: #484bfe;
+    color: #fff;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.chatBubble {
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #484bfe;
+    color: #fff;
+    max-width: 80%;
+    align-self: flex-end;
+}
+
+.chatBubble.bot {
+    align-self: flex-start;
+    background-color: #ccc;
+    color: #000;
+}
+
+#message {
+    font-size: medium;
+}
+
+#checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+#checkbox>label {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.25rem;
+}
+
+input[type="checkbox"] {
+    width: 1.25rem;
+    aspect-ratio: 1 / 1;
+}
